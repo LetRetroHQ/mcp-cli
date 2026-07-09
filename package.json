@@ -1,10 +1,9 @@
 {
   "name": "@letretro/mcp",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "LetRetro MCP — Connect Claude, Cursor, VS Code, Codex, OpenCode, and Antigravity to your LetRetro retrospectives.",
   "type": "module",
   "bin": {
-    "@letretro/mcp": "./dist/index.js",
     "letretro-mcp": "./dist/index.js"
   },
   "files": ["dist"],
