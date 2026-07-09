@@ -39,6 +39,7 @@
   "bugs": {
     "url": "https://github.com/LetRetroHQ/mcp-cli/issues"
   },
+  "packageManager": "pnpm@11.3.0",
   "engines": {
     "node": ">=18"
   },
