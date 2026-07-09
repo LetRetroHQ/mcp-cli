@@ -1,12 +1,18 @@
 import { existsSync } from "node:fs";
+import { join } from "node:path";
 import type { ClientModule } from "./index";
-import { paths } from "../utils/paths";
-import { isMacOS } from "../utils/paths";
+import { paths, isMacOS, isLinux } from "../utils/paths";
 
 const claudeDesktopExists = (): boolean => {
   if (isMacOS()) {
-    const appPath = "/Applications/Claude Desktop.app";
-    return existsSync(appPath);
+    return existsSync("/Applications/Claude Desktop.app");
+  }
+  if (isLinux()) {
+    const home = process.env.HOME || "";
+    return (
+      existsSync(join(home, ".local", "bin", "claude")) ||
+      existsSync("/opt/Claude/claude-desktop")
+    );
   }
   return false;
 };

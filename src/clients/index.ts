@@ -5,7 +5,7 @@ export interface ClientModule {
   id: string;
   name: string;
   configPaths(): string[];
-  format: "json" | "toml";
+  format: "json" | "toml" | "yaml";
   serverEntry(apiKey: string): { config: Record<string, unknown>; env: Record<string, string> };
   detect(): boolean;
 }

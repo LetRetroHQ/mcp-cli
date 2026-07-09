@@ -56,4 +56,20 @@ export const paths = {
       join(home(), ".gemini", "config", "mcp_config.json"),
     ];
   },
+
+  hermes(): string[] {
+    return [join(home(), ".hermes", "config.yaml")];
+  },
+
+  openclaw(): string[] {
+    return [join(home(), ".openclaw", "openclaw.json")];
+  },
+
+  windsurf(): string[] {
+    return [join(home(), ".codeium", "windsurf", "mcp_config.json")];
+  },
+
+  continueConfig(): string[] {
+    return [join(home(), ".continue", "config.json")];
+  },
 };

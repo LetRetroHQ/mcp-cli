@@ -30,7 +30,6 @@ export function addToTomlConfig(existing: string, serverName: string, serverConf
     return existing;
   }
 
-  const sections = [`mcp_servers.${serverName}`];
   let result = existing;
   if (!result.endsWith("\n")) result += "\n";
 

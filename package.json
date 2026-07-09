@@ -1,12 +1,14 @@
 {
   "name": "@letretro/mcp",
-  "version": "0.1.2",
-  "description": "LetRetro MCP — Connect Claude, Cursor, VS Code, Codex, OpenCode, and Antigravity to your LetRetro retrospectives.",
+  "version": "0.1.3",
+  "description": "LetRetro MCP — Connect Claude, Cursor, VS Code, Codex, OpenCode, Antigravity, Hermes, OpenClaw, Windsurf, and Continue to your LetRetro retrospectives.",
   "type": "module",
   "bin": {
     "letretro-mcp": "./dist/index.js"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -26,7 +28,11 @@
     "codex",
     "opencode",
     "antigravity",
-    "cli"
+    "cli",
+    "hermes",
+    "openclaw",
+    "windsurf",
+    "continue"
   ],
   "license": "MIT",
   "author": "LetRetro <team@letretro.com> (https://letretro.com)",
@@ -46,6 +52,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
     "enquirer": "^2.4"
   },
   "devDependencies": {

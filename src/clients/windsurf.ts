@@ -1,17 +1,16 @@
 import type { ClientModule } from "./index";
 import { paths } from "../utils/paths";
-import { detectBinary, detectConfigFile } from "./index";
+import { detectConfigFile } from "./index";
 
-export const vscode: ClientModule = {
-  id: "vscode",
-  name: "VS Code",
-  configPaths: () => paths.vscode(),
+export const windsurf: ClientModule = {
+  id: "windsurf",
+  name: "Windsurf",
+  configPaths: () => paths.windsurf(),
   format: "json",
 
   serverEntry(apiKey: string) {
     return {
       config: {
-        type: "stdio",
         command: "npx",
         args: ["-y", "@letretro/mcp"],
       },
@@ -20,6 +19,6 @@ export const vscode: ClientModule = {
   },
 
   detect() {
-    return detectBinary("code") || detectBinary("code-insiders") || detectConfigFile(paths.vscode()) !== null;
+    return detectConfigFile(paths.windsurf()) !== null;
   },
 };
