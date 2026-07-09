@@ -12,7 +12,7 @@ export interface ClientModule {
 
 export function detectBinary(name: string): boolean {
   try {
-    execSync(`which ${name} 2>/dev/null || where ${name} >nul 2>nul`, {
+    execSync(`which ${name} 2>/dev/null || where ${name} >/dev/null 2>&1`, {
       stdio: "ignore",
       timeout: 2000,
     });
