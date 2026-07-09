@@ -1,0 +1,57 @@
+{
+  "name": "@letretro/mcp",
+  "version": "0.1.0",
+  "description": "LetRetro MCP — Connect Claude, Cursor, VS Code, Codex, OpenCode, and Antigravity to your LetRetro retrospectives.",
+  "type": "module",
+  "bin": {
+    "@letretro/mcp": "./dist/index.js",
+    "letretro-mcp": "./dist/index.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "letretro",
+    "retrospective",
+    "ai",
+    "claude",
+    "cursor",
+    "vscode",
+    "codex",
+    "opencode",
+    "antigravity",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": "LetRetro <team@letretro.com> (https://letretro.com)",
+  "homepage": "https://mcp.letretro.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LetRetroHQ/mcp-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LetRetroHQ/mcp-cli/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "enquirer": "^2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "tsup": "^8.3",
+    "typescript": "^5.7",
+    "vitest": "^3"
+  }
+}
