@@ -51,14 +51,17 @@ interface ClientModule {
 }
 ```
 
-## 📦 Publishing
+## 💻 Useful commands
 
 ```bash
-npm version patch|minor|major
-git push --follow-tags
+pnpm build                                  # build the package
+pnpm dev                                    # watch mode (auto-rebuild on changes)
+pnpm test                                   # run tests
+pnpm test -- --watch                        # run tests in watch mode
+pnpm typecheck                              # check types without building
+pnpm build && node dist/index.js            # run the server locally
+pnpm build && node dist/index.js install    # run the install wizard locally
 ```
-
-The GitHub Actions workflow publishes to npm automatically on `v*` tags.
 
 ## 🐛 Reporting issues
 
